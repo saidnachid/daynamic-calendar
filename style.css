@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Teachers", sans-serif;
+}
+
+/* RESET */
+
+li {
+  list-style: none;
+}
+
+a,
+span,
+button,
+input,
+i,
+data,
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input {
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+img {
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: darkcyan;
+}
+
+.calendar-container {
+  max-width: 450px;
+  width: 90%;
+  background-color: white;
+  color: #696969;
+  border-radius: 15px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 6px;
+}
+
+.wrapper button {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #f3f3f3;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.wrapper button:hover {
+  background-color: #e2e2e2;
+}
+
+.weeks {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.weeks li {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 15px;
+  gap: 8px;
+}
+
+.days .day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 50%;
+}
+
+.days .day:hover {
+  background-color: #eeeeee;
+}
+
+.days .day.highlighted-days {
+  color: #c2c2c2;
+}
+
+.days .day.current-day {
+  background-color: #9932cc;
+  color: white;
+}
