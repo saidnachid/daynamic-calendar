@@ -81,7 +81,7 @@ body {
 }
 
 .wrapper button {
-  padding: 10px;
+  padding: 6px;
   border-radius: 50%;
   background-color: #f3f3f3;
   font-size: 20px;
@@ -100,14 +100,14 @@ body {
 
 .weeks li {
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  padding: 15px;
-  gap: 8px;
+  padding: 10px;
+  gap: 6px;
 }
 
 .days .day {
@@ -115,9 +115,10 @@ body {
   align-items: center;
   justify-content: center;
   margin: auto;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   font-weight: 500;
+  font-size: small;
   cursor: pointer;
   transition: background-color 0.3s ease;
   border-radius: 50%;
@@ -134,4 +135,22 @@ body {
 .days .day.current-day {
   background-color: #9932cc;
   color: white;
+}
+
+@media (min-width: 575px) {
+  .wrapper button {
+    padding: 10px;
+  }
+  .weeks li {
+    font-size: 1.2rem;
+  }
+  .days {
+    padding: 15px;
+    gap: 8px;
+  }
+  .days .day {
+    width: 40px;
+    height: 40px;
+    font-size: medium;
+  }
 }
